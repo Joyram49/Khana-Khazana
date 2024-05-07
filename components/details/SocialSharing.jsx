@@ -47,7 +47,7 @@ export default function SocialSharing({
       </svg>
       <span>Share</span>
       {isActive && (
-        <div className='absolute bottom-[-40px] left-[-100px]'>
+        <div className='absolute bottom-[-60px] left-[-100px]'>
           <SharingIcons
             recipeId={recipeId}
             name={name}

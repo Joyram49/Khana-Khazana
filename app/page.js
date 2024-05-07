@@ -1,6 +1,8 @@
 import Categories from "@/components/home/Categories";
 import FoodCardList from "@/components/home/FoodCardList";
 import HeroSection from "@/components/home/HeroSection";
+import Spinner from "@/components/ui/Spinner";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -12,7 +14,9 @@ export default function Home() {
             <h3 className='font-bold text-xl'>Recipes</h3>
             <Categories />
           </div>
-          <FoodCardList />
+          <Suspense fallback={<Spinner />}>
+            <FoodCardList />
+          </Suspense>
         </div>
       </section>
     </main>
